@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+           "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myspring.leeProject.mappers.MemberDAO">
+	<resultMap type="MemberVO" id="memberResult">
+		<result property="member_id" column="MEMBER_ID" />
+		<result property="member_pw" column="MEMBER_PW" />
+		<result property="member_name" column="MEMBER_NAME" />
+		<result property="member_gender" column="MEMBER_GENDER" />
+		<result property="tel1" column="TEL1" />
+		<result property="tel2" column="TEL2" />
+		<result property="tel3" column="TEL3" />
+		<result property="hp1" column="HP1" />
+		<result property="hp2" column="HP2" />
+		<result property="hp3" column="HP3" />
+		<result property="smssts_yn" column="SMSSTS_YN" />
+		<result property="email1" column="EMAIL1" />
+		<result property="email2" column="EMAIL2" />
+		<result property="emailsts_yn" column="EMAILSTS_YN" />
+		<result property="zipcode" column="ZIPCODE" />
+		<result property="roadAddress" column="ROADADDRESS" />
+		<result property="jibunAddress" column="JIBUNADDRESS" />
+		<result property="namujiAddress" column="NAMUJIADDRESS" />
+		<result property="member_birth_y" column="MEMBER_BIRTH_Y" />
+		<result property="member_birth_m" column="MEMBER_BIRTH_M" />
+		<result property="member_birth_d" column="MEMBER_BIRTH_D" />
+		<result property="member_birth_gn" column="MEMBER_BIRTH_GN" />
+		<result property="joindate" column="JOINDATE" />
+		<result property="del_yn" column="DEL_YN" />
+	</resultMap>
+
+	<select id="listMembers"
+		resultType="com.myspring.leeProject.entity.MemberVO">
+		select * from t_shopping_member
+	</select>
+</mapper>
